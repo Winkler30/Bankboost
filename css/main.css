@@ -57,6 +57,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 124.6rem;
@@ -288,11 +292,10 @@ header.fixed-menu .container .right .btn:hover {
 }
 @media (max-width: 991px) {
   header.fixed-menu .container .btn-mobile {
-    background: url(../img/icon-burguer-black.svg) no-repeat center center;
+    background: url(../img/icon-burguer-black.svg) no-repeat center center/contain;
+    width: 27px;
+    height: 22px;
     display: block;
-    width: 2.7rem;
-    height: 2.2rem;
-    background-size: 100%;
   }
 }
 header .container {
@@ -418,11 +421,10 @@ header .container .btn-mobile {
     display: none;
   }
   header .container .btn-mobile {
-    background: url(../img/icon-burguer.svg) no-repeat center center;
+    background: url(../img/icon-burguer.svg) no-repeat center center/contain;
+    width: 27px;
+    height: 22px;
     display: block;
-    width: 2.7rem;
-    height: 2.2rem;
-    background-size: 100%;
   }
 }
 
