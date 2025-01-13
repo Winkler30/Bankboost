@@ -1,0 +1,211 @@
+footer {
+  position: relative;
+  background-color: #35189c;
+  padding: 4rem 0;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #ffc800;
+    max-width: 121.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -60.8rem;
+  }
+  .container {
+    .area-social {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 4rem;
+      .social-media {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        span {
+          font-size: 1.4rem;
+          font-weight: 400;
+          opacity: 0.7;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 3.2rem;
+          li{
+            a{
+              transition: opacity 0.3s ease;
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-area {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 5.6rem;
+      margin-bottom: 2.4rem;
+      .left {
+        flex: 1;
+        max-width: 84.1rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .item {
+          h5 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 3.2rem;
+          }
+          ul {
+            li {
+              a {
+                font-size: 1.4rem;
+                opacity: 0.67;
+                transition: opacity 0.3s ease;
+                &:hover {
+                  opacity: 1;
+                }
+              }
+              &:not(:last-child) {
+                margin-bottom: 3.2rem;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        max-width: 29.9rem;
+        a {
+          display: flex;
+          align-items: center;
+          border-radius: 6px;
+          background-color: rgba(255, 255, 255, 0.04);
+          padding: 2.6rem 1.5rem 2.6rem 2.4rem;
+          gap: 1.6rem;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+          &:not(:last-child) {
+            margin-bottom: 2.4rem;
+          }
+          .description {
+            strong {
+              color: var(--white);
+              font-size: 1.4rem;
+              font-weight: 600;
+              line-height: 150%;
+            }
+            p {
+              color: var(--white);
+              font-size: 1.4rem;
+              line-height: 150%;
+            }
+          }
+        }
+      }
+    }
+    .copy {
+      .text {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.6rem;
+        p {
+          flex: 1;
+          max-width: 66rem;
+          color: #fff;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .container {
+      .main-area {
+        gap: 3rem;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .container {
+      .main-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        .left {
+          flex-wrap: wrap;
+          gap: 4%;
+          max-width: 100%;
+          width: 100%;
+          .item {
+            width: 48%;
+            text-align: center;
+            &:not(:last-child) {
+              margin-bottom: 4rem;
+            }
+            &:last-child {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    .container {
+      .area-social {
+        flex-direction: column;
+        align-items: center;
+        gap: 3.2rem;
+        .social-media {
+          flex-direction: column;
+        }
+      }
+      .main-area {
+        .left {
+          .item {
+            text-align: left;
+          }
+        }
+        .right {
+          max-width: 100%;
+          width: 100%;
+          a {
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+      }
+      .copy {
+        .text {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          p {
+            max-width: 336px;
+            line-height: 150%;
+            text-wrap: balance;
+          }
+        }
+      }
+    }
+    &::after{
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}

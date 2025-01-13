@@ -1,0 +1,189 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 2.4rem 0;
+  z-index: 10;
+  transition: all 0.3s;
+  &.fixed-menu {
+    background-color: var(--WHITE);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.09);
+    .container {
+      .logo {
+        background: url(../img/logo-color.svg) no-repeat center center;
+        background-size: contain;
+      }
+      .right {
+        nav {
+          a {
+            color: var(--GRAY-900);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            &:hover {
+              color: var(--PURPLE-10);
+              opacity: 1;
+            }
+          }
+        }
+        .btn {
+          color: var(--PURPLE-10);
+          border: 1px solid var(--PURPLE-10);
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: var(--PURPLE-10);
+            color: var(--WHITE);
+          }
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      .container{
+        .btn-mobile {
+          background: url(../img/icon-burguer-black.svg) no-repeat center center;
+          display: block;
+          width: 2.7rem;
+          height: 2.2rem;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      display: inline-block;
+      width: 17.6rem;
+      height: 3rem;
+      background: url(../img/logo.svg) no-repeat center center;
+      background-size: 100%;
+      transition: all 0.3s ease;
+    }
+    .right {
+      flex: 1;
+      max-width: 89.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2025;
+      nav {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        .dropdown {
+          position: absolute;
+          top: 4.9rem;
+          left: -13rem;
+          width: 100%;
+          max-width: 373px;
+          border-radius: 6px;
+          background-color: var(--WHITE);
+          padding: 4rem 4rem;
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(20px);
+          transition: all 0.3s ease-in-out;
+          &.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0px);
+          }
+          &::after {
+            content: "";
+            width: 293px;
+            height: 5px;
+            background-color: #ffc800;
+            border-radius: 12px 12px 0px 0px;
+            position: absolute;
+            bottom: 0;
+          }
+          .item {
+            cursor: pointer;
+            strong {
+              font-size: 1.6rem;
+              color: var(--GRAY-800);
+              display: block;
+              margin-bottom: 0.4rem;
+              transform: color 0.3s ease-in-out;
+              &:hover {
+                color: var(--PURPLE-10);
+              }
+            }
+            p {
+              font-size: 1.4rem;
+              line-height: 150%;
+              color: var(--GRAY-500);
+            }
+            &:not(:last-child) {
+              margin-bottom: 2.8rem;
+            }
+          }
+        }
+        a {
+          color: var(--GRAY-100);
+          font-family: "Inter", sans-serif;
+          font-size: 1.6rem;
+          font-weight: 400;
+          transition: all 0.3s ease;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+      .btn {
+        padding: 1.1rem 2.4rem;
+        border-radius: 12.2rem;
+        border: 1px solid var(--WHITE);
+        color: var(--GRAY-100);
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: var(--WHITE);
+          color: var(--PURPLE-10);
+        }
+      }
+    }
+    .btn-mobile {
+      display: none;
+    }
+  }
+  @media (max-width: 1200px) {
+    .container {
+      .right {
+        max-width: 81.6rem;
+        .nav {
+          gap: 3rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 1050px) {
+    .container {
+      .right {
+        max-width: 74.6rem;
+        nav {
+          gap: 2rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .container {
+      .right {
+        display: none;
+      }
+      .btn-mobile {
+        background: url(../img/icon-burguer.svg) no-repeat center center;
+        display: block;
+        width: 2.7rem;
+        height: 2.2rem;
+        background-size: 100%;
+      }
+    }
+  }
+}
